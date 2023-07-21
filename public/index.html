@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" class="form-username">
+    <form action="" class="form-username" autocomplete="off">
         <div class="main-container">
             <div class="user-container">
                 <h1>Welcome to ChatRoom</h1>
@@ -22,14 +22,16 @@
 
             <div class="chat-container">
                 <div class="messages" id="message-container">
-                    <div class="message sent">Hey</div>
-                    <div class="message received">Hi</div>
+                    <!-- <div class="message sent">Hey</div>
+                    <div class="message received">Hi</div> -->
                 </div>
                 <div class="send-container">
-                    <input type="text" class="send-textbox" placeholder="message" id="input">
+                    <input type="text" class="send-textbox" placeholder="message" id="message-input">
                     <button class="send-button" id="send-button">Send</button>
                 </div>
             </div>
     </div>
+
+    <script src="/socket.io/socket.io.js"></script>
 </body>
 </html>
