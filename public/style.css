@@ -1,0 +1,129 @@
+* {
+    font-style: italic;
+    background-color: rgb(192, 188, 183);
+    margin: 0;
+    padding: 0;
+    background-color: rgb(27, 47, 27);
+}
+
+h1 {
+    text-align: center;
+    color: rgb(240, 240, 240);
+}
+
+.form-username {
+    display: block;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    gap: 20px;
+}
+.txt-username::placeholder {
+    text-align: center;
+}
+
+.login-button {
+    width: 30%;
+    font-size: 1rem;
+}
+
+.chatroom-container {
+    display: block;
+    height: 100vh;
+    width: 100%;
+}
+
+.chat-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+}
+
+.chatroom-header {
+    background-color: rgb(86, 110, 86);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 50vh;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+    overflow: auto;
+}
+
+.received {
+    background-color: rgb(139, 173, 139);
+    width: fit-content;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.sent {
+    align-self: flex-end;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    color: white;
+}
+
+.send-container{
+    display: flex;
+    gap: 5px;
+    box-sizing: border-box;
+    width: 30%;
+    justify-content: center;
+}
+
+.send-button {
+    border-radius: 5px;
+    padding: 1rem;
+    border-radius: 50px;
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+.send-button:hover {
+    cursor: pointer;
+}
+.send-button:active {
+    border-radius: 15px;
+}
+
+.send-textbox {
+    border-radius: 50px;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 0.5px solid rgb(40, 71, 40);
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.send-textbox:focus {
+    outline: none;
+}
