@@ -11,11 +11,13 @@ button.addEventListener("click", (event) => {
 
   console.log("clicked");
 
-  let input = document.getElementById("username").value;
+  let txtBox1 = document.getElementById("senderName").value.trim();
+  let txtBox2 = document.getElementById("receiverName").value.trim();
+  console.log(txtBox1, txtBox2);
 
-  if (input.trim() !== "" && input.split(" ").length === 2) {
-    senderName = input.split(" ")[0];
-    receiverName = input.split(" ")[1];
+  if (txtBox1 !== "" && txtBox2 !== "") {
+    senderName = txtBox1;
+    receiverName = txtBox2;
     document.querySelector(".form-username").style.display = "none";
     document.querySelector(".chatroom-container").style.display = "block";
   } else {
@@ -27,7 +29,7 @@ document.getElementById("send-button").addEventListener("click", (event) => {
   event.preventDefault();
 
   const data = {
-    sender_userName: username,
+    sender_userName: senderName,
     message: document.getElementById("message-input").value,
     receiver_userName: receiverName,
   };
@@ -44,7 +46,6 @@ document.getElementById("send-button").addEventListener("click", (event) => {
 
 // receiving message from io
 socket.on("message", (data) => {
-  console.log(data);
   if (data.receiver_userName === senderName) {
     //if the sender username same as the current username it should not print the message
     addMessageToUI(data, "received");

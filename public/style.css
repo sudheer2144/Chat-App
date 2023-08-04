@@ -26,10 +26,11 @@ h1 {
 .user-container {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 100%;
     align-items: center;
     gap: 20px;
 }
+
 .txt-username::placeholder {
     text-align: center;
 }
@@ -91,7 +92,7 @@ h1 {
     color: white;
 }
 
-.send-container{
+.send-container {
     display: flex;
     gap: 5px;
     box-sizing: border-box;
@@ -111,6 +112,7 @@ h1 {
 .send-button:hover {
     cursor: pointer;
 }
+
 .send-button:active {
     border-radius: 15px;
 }
@@ -120,8 +122,9 @@ h1 {
     padding: 1rem;
     font-size: 1rem;
     border: 0.5px solid rgb(40, 71, 40);
-    width: 100%;
+    width: 50%;
     background-color: rgb(255, 255, 255);
+    margin: 0 0.5rem;
 }
 
 .send-textbox:focus {
