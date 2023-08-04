@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <form action="" class="form-username" autocomplete="off">
-        <div class="main-container">
-            <div class="user-container">
-                <h1>Welcome to ChatRoom</h1>
-                <input type="text" class="txt-username send-textbox" name="txt-username" id="username" placeholder="Enter Username">
-                <button class="login-button send-button" id="join-btn" type="submit">Join</button>
-            </div>
+      <div class="main-container">
+        <div class="user-container">
+          <h1>Welcome to ChatRoom</h1>
+          <input
+            type="text"
+            class="txt-username send-textbox"
+            id="username"
+            placeholder="Enter Username"
+          />
+          <button class="login-button send-button" id="join-btn" type="submit">
+            Join
+          </button>
         </div>
+      </div>
     </form>
 
     <div class="chatroom-container">
-
-            <div class="chat-container">
-                <div class="messages" id="message-container">
-                    <!-- <div class="message sent">Hey</div>
+      <div class="chat-container">
+        <div class="messages" id="message-container">
+          <!-- <div class="message sent">Hey</div>
                     <div class="message received">Hi</div> -->
-                </div>
-                <div class="send-container">
-                    <input type="text" class="send-textbox" placeholder="message" id="message-input">
-                    <button class="send-button" id="send-button">Send</button>
-                </div>
-            </div>
+        </div>
+        <div class="send-container">
+          <input
+            type="text"
+            class="send-textbox"
+            placeholder="message"
+            id="message-input"
+          />
+          <button class="send-button" id="send-button">Send</button>
+        </div>
+      </div>
     </div>
 
     <script src="/socket.io/socket.io.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
